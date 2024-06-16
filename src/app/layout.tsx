@@ -7,6 +7,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='es'>
+      <head>
+        <link rel="icon" href="/favicon.svg" sizes='16x16' />
+        <title>Propinita | Recibí propinas fácil y rápido.</title>
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>
