@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
-import logoPropinita from '@/../public/logo.svg'
+import logoPropinita from '/public/logo.svg'
 import Image from 'next/image'
 
 const Logo = (props: any) => {

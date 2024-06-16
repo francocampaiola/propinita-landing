@@ -22,7 +22,7 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons'
 import Image from 'next/image'
-import logoPropinita from '@/../public/Logo.svg'
+import logoPropinita from '/public/logo.svg'
 import { Link } from '@chakra-ui/next-js'
 
 export default function Navbar() {
