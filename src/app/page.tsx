@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import Feature from './components/Features';
 import Testimonial from './components/Testimonials';
 import LargeWithLogoCentered from './components/Footer';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Divider, Flex } from '@chakra-ui/react';
+import HowWorks from './components/HowWorks';
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Feature />
+        <Divider mt={12} mb={12} />
+        <HowWorks />
         <Testimonial />
         <LargeWithLogoCentered />
       </Box>

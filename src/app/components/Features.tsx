@@ -2,62 +2,45 @@
 
 import {
   Box,
-  VStack,
-  Button,
   Flex,
   Divider,
   chakra,
   Grid,
   GridItem,
   Container,
+  Badge,
 } from '@chakra-ui/react'
+import { RiApps2Fill, RiFundsBoxLine, RiGift2Line, RiHistoryLine, RiNotification2Line, RiProfileLine, RiRssFill, RiSecurePaymentLine } from 'react-icons/ri'
 
 interface FeatureProps {
+  logo: React.ReactNode,
   heading: string
-  text: string
+  text: string,
+  badge?: React.ReactNode
 }
 
-const Feature = ({ heading, text }: FeatureProps) => {
+const Feature = ({ logo, heading, text, badge }: FeatureProps) => {
   return (
     <GridItem>
-      <chakra.h3 fontSize="xl" fontWeight="600">
+      <Flex justify={'center'} mb={2}>
+        {logo}
+      </Flex>
+      <chakra.h3 fontSize="xl" textAlign={'center'} mb={2} fontWeight="600">
         {heading}
+        {badge}
       </chakra.h3>
-      <chakra.p>{text}</chakra.p>
+      <chakra.p textAlign={'center'}>{text}</chakra.p>
     </GridItem>
   )
 }
 
-export default function gridListWithCTA() {
+export default function Features() {
   return (
-    <section id='features'>
-      <Box as={Container} maxW="7xl" mt={14} p={4} h={'90vh'}>
-        <Grid
-          templateColumns={{
-            base: 'repeat(1, 1fr)',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(2, 1fr)',
-          }}
-          gap={4}>
-          <GridItem colSpan={1}>
-            <VStack alignItems="flex-start" spacing="20px">
-              <chakra.h2 fontSize="3xl" fontWeight="700">
-                Medium length title
-              </chakra.h2>
-              <Button colorScheme="green" size="md">
-                Call To Action
-              </Button>
-            </VStack>
-          </GridItem>
-          <GridItem>
-            <Flex>
-              <chakra.p>
-                Provide your customers a story they would enjoy keeping in mind the
-                objectives of your website. Pay special attention to the tone of voice.
-              </chakra.p>
-            </Flex>
-          </GridItem>
-        </Grid>
+    <Flex id='features' justify={'center'} align={'center'} fontFamily={'-apple-system'}>
+      <Box as={Container} maxW="7xl" p={4} height={'90vh'}>
+        <chakra.h2 textAlign={'center'} fontSize="4xl" fontWeight="600" mb={8}>
+          Características
+        </chakra.h2>
         <Divider mt={12} mb={12} />
         <Grid
           templateColumns={{
@@ -67,23 +50,51 @@ export default function gridListWithCTA() {
           }}
           gap={{ base: '8', sm: '12', md: '16' }}>
           <Feature
-            heading={'First Feature'}
-            text={'Short text describing one of you features/service'}
+            logo={<RiHistoryLine size={50} color='#B49B24' />}
+            heading={'Historial de propinas'}
+            text={'Muestra un registro detallado de todas las propinas recibidas, incluyendo la fecha, el monto y el remitente, para que los usuarios puedan mantener un seguimiento preciso de sus ingresos.'}
           />
           <Feature
-            heading={'Second Feature'}
-            text={'Short text describing one of you features/service'}
+            logo={<RiRssFill size={50} color='#B49B24' />}
+            heading={'Integración con RRSS'}
+            text={'Comparte fácilmente tu enlace de Propinita en plataformas como Facebook, Twitter o Instagram para aumentar tu visibilidad y tus oportunidades de recibir propinas.'}
           />
           <Feature
-            heading={'Third Feature'}
-            text={'Short text describing one of you features/service'}
+            logo={<RiApps2Fill size={50} color='#B49B24' />}
+            heading={'Multiplataforma'}
+            text={'Accede a Propinita desde cualquier dispositivo, ya sea un smartphone, tablet o computadora, gracias a las tecnologías de punta que utilizamos.'}
           />
           <Feature
-            heading={'Fourth Feature'}
-            text={'Short text describing one of you features/service'}
+            logo={<RiSecurePaymentLine size={50} color='#B49B24' />}
+            heading={'Integración de pagos'}
+            text={'Retira tus propinas de forma rápida y segura a tu cuenta bancaria o a servicios de pago populares como MercadoPago, con total comodidad.'}
+          />
+          <Feature
+            logo={<RiNotification2Line size={50} color='#B49B24' />}
+            heading={'Notificaciones push'}
+            badge={<Badge colorScheme='yellow'>Próximamente</Badge>}
+            text={'Recibe alertas instantáneas sobre nuevas propinas o actualizaciones importantes en la aplicación, manteniéndote siempre al tanto de tus ingresos.'}
+          />
+          <Feature
+            logo={<RiProfileLine size={50} color='#B49B24' />}
+            heading={'Modificación de perfil'}
+            badge={<Badge colorScheme='yellow'>Próximamente</Badge>}
+            text={'Personaliza tu perfil mostrando tu personalidad y aumentando tu conexión con tus seguidores y posibles propinadores.'}
+          />
+          <Feature
+            logo={<RiFundsBoxLine size={50} color='#B49B24' />}
+            heading={'Estadísticas avanzadas'}
+            badge={<Badge colorScheme='yellow'>Próximamente</Badge>}
+            text={'Visualiza gráficos e informes detallados sobre tus propinas recibidas, lo que te permite comprender mejor tus ingresos y tomar decisiones informadas.'}
+          />
+          <Feature
+            logo={<RiGift2Line size={50} color='#B49B24' />}
+            heading={'Sistema de recompensas'}
+            badge={<Badge colorScheme='yellow'>Próximamente</Badge>}
+            text={'Desbloquea beneficios adicionales al alcanzar hitos de propinas o participar en desafíos de la comunidad, incentivando tu participación activa.'}
           />
         </Grid>
       </Box>
-    </section>
+    </Flex>
   )
 }

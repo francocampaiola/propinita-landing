@@ -86,7 +86,7 @@ const TestimonialAvatar = ({
     title: string
 }) => {
     return (
-        <Flex align={'center'} mt={8} direction={'column'}>
+        <Flex align={'center'} direction={'column'}>
             <Avatar src={src} mb={2} />
             <Stack spacing={-1} align={'center'}>
                 <Text fontWeight={600}>{name}</Text>
@@ -100,65 +100,64 @@ const TestimonialAvatar = ({
 
 export default function WithSpeechBubbles() {
     return (
-        <Box bg={useColorModeValue('gray.100', 'gray.700')}>
-            <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
-                <Stack spacing={0} align={'center'}>
-                    <Heading>Our Clients Speak</Heading>
-                    <Text>We have been working with clients around the world</Text>
-                </Stack>
-                <Stack
-                    direction={{ base: 'column', md: 'row' }}
-                    spacing={{ base: 10, md: 4, lg: 10 }}>
-                    <Testimonial>
-                        <TestimonialContent>
-                            <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
-                            <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
-                            </TestimonialText>
-                        </TestimonialContent>
-                        <TestimonialAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-                            }
-                            name={'Jane Cooper'}
-                            title={'CEO at ABC Corporation'}
-                        />
-                    </Testimonial>
-                    <Testimonial>
-                        <TestimonialContent>
-                            <TestimonialHeading>Intuitive Design</TestimonialHeading>
-                            <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
-                            </TestimonialText>
-                        </TestimonialContent>
-                        <TestimonialAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-                            }
-                            name={'Jane Cooper'}
-                            title={'CEO at ABC Corporation'}
-                        />
-                    </Testimonial>
-                    <Testimonial>
-                        <TestimonialContent>
-                            <TestimonialHeading>Mindblowing Service</TestimonialHeading>
-                            <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
-                            </TestimonialText>
-                        </TestimonialContent>
-                        <TestimonialAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-                            }
-                            name={'Jane Cooper'}
-                            title={'CEO at ABC Corporation'}
-                        />
-                    </Testimonial>
-                </Stack>
-            </Container>
-        </Box>
+        <section id='testimonials'>
+            <Box>
+                <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
+                    <Stack spacing={0} align={'center'}>
+                        <Heading>Lo que dicen nuestros usuarios</Heading>
+                        <Text>Estamos ayudando a personas en todo el mundo a recibir propinas de manera fácil y rápida</Text>
+                    </Stack>
+                    <Stack
+                        direction={{ base: 'column', md: 'row' }}
+                        spacing={{ base: 10, md: 4, lg: 10 }}>
+                        <Testimonial>
+                            <TestimonialContent>
+                                <TestimonialHeading>Fácil y rápido</TestimonialHeading>
+                                <TestimonialText>
+                                    Propinita me ha permitido recibir propinas de manera sencilla y sin complicaciones. Ahora mis clientes pueden mostrar su aprecio fácilmente.
+                                </TestimonialText>
+                            </TestimonialContent>
+                            <TestimonialAvatar
+                                src={
+                                    'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
+                                }
+                                name={'Juan Bautista Barros'}
+                                title={'Bartender en Bar Central'}
+                            />
+                        </Testimonial>
+                        <Testimonial>
+                            <TestimonialContent>
+                                <TestimonialHeading>Una solución segura</TestimonialHeading>
+                                <TestimonialText>
+                                    Con Propinita, sé que mis transacciones están seguras. Puedo recibir propinas sin preocuparme por la seguridad.
+                                </TestimonialText>
+                            </TestimonialContent>
+                            <TestimonialAvatar
+                                src={
+                                    'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
+                                }
+                                name={'María Gómez'}
+                                title={'Mesera en Café Buenos Aires'}
+                            />
+                        </Testimonial>
+                        <Testimonial>
+                            <TestimonialContent>
+                                <TestimonialHeading>Increíblemente útil</TestimonialHeading>
+                                <TestimonialText>
+                                    Desde que uso Propinita, he visto un aumento en mis propinas. La app es muy fácil de usar y mis clientes la adoran.
+                                </TestimonialText>
+                            </TestimonialContent>
+                            <TestimonialAvatar
+                                src={
+                                    'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
+                                }
+                                name={'Sofía Rodríguez'}
+                                title={'Artista callejera'}
+                            />
+                        </Testimonial>
+                    </Stack>
+                </Container>
+            </Box>
+        </section>
     )
 }
