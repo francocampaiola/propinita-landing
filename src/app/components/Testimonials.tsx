@@ -32,6 +32,7 @@ const TestimonialContent = (props: Props) => {
             rounded={'xl'}
             align={'center'}
             pos={'relative'}
+            mb={6}
             _after={{
                 content: `""`,
                 w: 0,

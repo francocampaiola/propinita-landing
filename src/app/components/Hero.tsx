@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from '@chakra-ui/next-js'
 import {
     Stack,
     Flex,
@@ -53,24 +54,28 @@ export default function Hero() {
                         Creá tu cuenta, compartí tu enlace o código QR, y empezá a recibir propinas al toque.
                     </Text>
                     <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-                        <Button
-                            rounded={'full'}
-                            size={'md'}
-                            fontWeight={'normal'}
-                            px={6}
-                            color={'white'}
-                            bg={'#B49B24'}
-                            _hover={{ opacity: 0.8 }}>
-                            Ir a la app
-                        </Button>
-                        <Button
-                            rounded={'full'}
-                            size={'md'}
-                            fontWeight={'normal'}
-                            px={6}
-                            leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                            ¿Cómo funciona?
-                        </Button>
+                        <Link href={'https://propinita.app'} target='_blank'>
+                            <Button
+                                rounded={'full'}
+                                size={'md'}
+                                fontWeight={'normal'}
+                                px={6}
+                                color={'white'}
+                                bg={'#B49B24'}
+                                _hover={{ opacity: 0.8 }}>
+                                Ir a la app
+                            </Button>
+                        </Link>
+                        <Link href={'#how-it-works'}>
+                            <Button
+                                rounded={'full'}
+                                size={'md'}
+                                fontWeight={'normal'}
+                                px={6}
+                                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
+                                ¿Cómo funciona?
+                            </Button>
+                        </Link>
                     </Stack>
                 </Stack>
                 <Flex

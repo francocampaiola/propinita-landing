@@ -23,6 +23,7 @@ import {
 } from '@chakra-ui/icons'
 import Image from 'next/image'
 import logoPropinita from '@/../public/Logo.svg'
+import { Link } from '@chakra-ui/next-js'
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure()
@@ -51,12 +52,14 @@ export default function Navbar() {
                     />
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+                    <Link href={'#'}>
                     <Text
                         textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                         fontFamily={'heading'}
                         color={useColorModeValue('gray.800', 'white')}>
                         <Image src={logoPropinita} alt='Logo' width={100} />
                     </Text>
+                    </Link>
                 </Flex>
                 <Stack>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -228,14 +231,10 @@ const NAV_ITEMS: Array<NavItem> = [
     },
     {
         label: 'Cómo funciona',
-        href: '#',
+        href: '#how-it-works',
     },
     {
         label: 'Testimonios',
-        href: '#',
-    },
-    {
-        label: 'Contacto',
-        href: '#',
-    },
+        href: '#testimonials',
+    }
 ]

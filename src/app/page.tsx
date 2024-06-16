@@ -13,7 +13,6 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Feature />
-        <Divider mt={12} mb={12} />
         <HowWorks />
         <Testimonial />
         <LargeWithLogoCentered />

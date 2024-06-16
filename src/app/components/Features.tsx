@@ -36,7 +36,7 @@ const Feature = ({ logo, heading, text, badge }: FeatureProps) => {
 
 export default function Features() {
   return (
-    <Flex id='features' justify={'center'} align={'center'} fontFamily={'-apple-system'}>
+    <Flex id='features' justify={'center'} align={'center'} fontFamily={'-apple-system'} mb={32}>
       <Box as={Container} maxW="7xl" p={4} height={'90vh'}>
         <chakra.h2 textAlign={'center'} fontSize="4xl" fontWeight="600" mb={8}>
           Características
